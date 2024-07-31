@@ -1,0 +1,430 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito Sans', Arial, sans-serif; /* Assuming Nunito Sans is imported from Google Fonts */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px; /* Added padding to the body for overall spacing */
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 20px 20px;
+    text-align: center;
+    border-bottom: 2px solid #ccc; /* Changed to only bottom border */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Added shadow for depth */
+    border-radius: 25px;
+}
+
+/* Navigation menu styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Changed to flex to evenly space items */
+    justify-content: center; /* Center items horizontally */
+}
+
+nav ul li {
+    margin-right: 20px; /* Increased spacing */
+    font-size: 20px; /* Larger font size for better visibility */
+}
+
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px; /* Increased padding for larger area */
+}
+
+nav a:hover {
+    background-color: #f4f4f4; /* Subtle hover effect */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+/* Section styling */
+section {
+    padding: 20px 40px 40px 40px; /* Decreased top padding and specified padding for other sides */
+    margin: 20px 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soft shadow for 3D effect */
+    border-radius: 10px; /* Smoother corners */
+}
+
+#project-list {
+    position: relative; /* Allows absolute positioning within this container */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+}
+
+
+
+.project-item {
+    flex: 1 1 30%;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    position: relative; /* Ensures that it can be animated within the flex container */
+    overflow: hidden;
+}
+
+.project-item.expanded {
+    position: absolute;
+    width: 100%; /* Makes it take full width of the project list */
+    top: 0; /* Aligns to the top of the project list */
+    left: 0; /* Aligns to the left of the project list */
+    height: auto; /* Auto height to fit content */
+    z-index: 100; /* Ensures it's above other content */
+    padding: 40px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Adds scroll to the expanded project */
+    border-radius: 0;
+}
+
+
+/* Enhancements for headings and descriptions */
+.project-item h3 {
+    font-size: 1.5em; /* Larger size for project titles */
+    color: #333; /* Dark color for text */
+}
+
+.project-item p {
+    font-size: 1.1em; /* Readable text size */
+    color: #666; /* Lighter text color for contrast */
+}
+
+/* Styling for technology list */
+.project-item ul {
+    list-style-type: none; /* No bullet points */
+    padding: 0; /* No padding to align with start of content */
+    margin-top: 10px; /* Space above the technology list */
+}
+
+.project-item li {
+    background: #f0f0f0; /* Light gray background for technology items */
+    padding: 5px 10px; /* Padding for each technology */
+    margin-bottom: 2px; /* Space between technologies */
+    border-radius: 5px; /* Rounded corners for technology items */
+    display: inline-flex; /* Makes the list item inline for snug fit around content */
+    align-items: center; /* Center items vertically */
+    font-size: 0.9em; /* Smaller font size for technology items */
+}
+
+.logo-image {
+    width: 30px; /* Fixed width for logos */
+    height: 30px; /* Fixed height for logos */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.full-width-image {
+    width: 100%;  /* Makes the image take the full width of its container */
+    height: auto; /* Maintains the aspect ratio of the image */
+    display: block; /* Removes any extra space below the image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-item {
+        flex: 1 1 100%; /* Full width on smaller screens */
+    }
+}
+
+.view-btn {
+    padding: 8px 16px;
+    background-color: #007BFF; /* Bootstrap primary blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.project-description {
+    padding: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #ccc; /* Visual separation from the main content */
+    display: none; /* Initially hidden */
+}
+
+.project-description h4 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-description p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.project-description ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.project-description li:before {
+    content: "-"; /* Use hyphen as the bullet point */
+    padding-right: 10px;
+}
+
+.project-description li {
+    background: none; /* No background for description list items */
+    display: block; /* Default block display for standard list items */
+    margin-bottom: 5px; /* Standard spacing between list items */
+    padding-left: 25px; /* Add padding to make space for the hyphen */
+    border-radius: 0; /* No rounded corners for description list items */
+    font-size: 1em; /* Reset font size if needed */
+}
+
+strongDescr {
+    color: #0056b3; /* Change the font color for emphasis */
+    font-weight: bold; /* Ensure it's bold */
+    background-color: #f0f0f0; /* Optional: add a light background */
+    padding: 2px 4px; /* Optional: padding to make it stand out */
+    border-radius: 4px; /* Optional: rounded corners for aesthetic */
+}
+
+
+.project-description p, .project-description h3 {
+    color: #333;
+    font-size: 1.1em;
+}
+
+
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ddd;
+    color: #fff;
+    border-top: 2px solid #ccc; /* Consistent with header */
+}
+
+/* Utility classes */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.view-container {
+    display: flex;
+    flex: 1;
+    height: 100%;
+}
+
+.half-view {
+    flex: 1;
+    height: 100%;
+    /* transition: flex 0.5s ease; */
+}
+
+#map.fullscreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+}
+
+
+#closeButton {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 30px;
+    color: white; /* Ensuring the color contrasts well with the dark background */
+    cursor: pointer;
+    background: #4CAF50;
+    border: none;
+    z-index: 1051; /* Higher z-index to ensure it's above all other content */
+    outline: none;
+}
+
+#resultModal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%; /* Take 20% of the screen height */
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1101;
+    justify-content: center;
+    align-items: center;
+    animation: slideUp 0.5s ease-out;
+    padding: 20px;
+}
+
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+#resultModalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1102; /* Ensure content is above the modal background */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content horizontally */
+}
+
+.progress-bar-wrapper {
+    width: 100%;
+    height: 20px; /* Fixed height for the progress bar */
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 100%; /* Fill the height of the progress-bar-wrapper */
+    width: 0;
+    background-color: #4caf50;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 20px; /* Center text vertically */
+    color: white;
+    transition: width 1s ease-in-out; /* Smooth transition for width change */
+}
+.game-button {
+    background-color: #4CAF50; /* Green background for visibility and contrast */
+    color: white; /* White text for readability */
+    border: none; /* No border for a modern look */
+    padding: 10px 20px; /* Adequate padding for touch targets and aesthetics */
+    text-align: center; /* Center text within the button */
+    text-decoration: none; /* No underlines etc. */
+    display: inline-block; /* Allows buttons to sit inline */
+    font-size: 30px; /* Reasonable font size for visibility */
+    margin: 4px 2px; /* Space between buttons and other elements */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners for a softer look */
+    transition: background-color 10s; /* Smooth transition for hover effects */
+}
+
+.game-button:hover {
+    background-color: #45a049; /* Darker shade of green on hover for feedback */
+}
+
+.game-button_next {
+    background-color: #4CAF50; /* Green background for visibility and contrast */
+    color: white; /* White text for readability */
+    border: none; /* No border for a modern look */
+    text-align: center; /* Center text within the button */
+    text-decoration: none; /* No underlines etc. */
+    display: inline-block; /* Allows buttons to sit inline */
+    font-size: 35px; /* Reasonable font size for visibility */
+    /* margin: 4px 2px; Space between buttons and other elements */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners for a softer look */
+    transition: background-color 10s; /* Smooth transition for hover effects */
+    height: 100%; /* Ensure the button takes full height of its container */
+    /* padding: 20px; */
+    margin-right: 10px;
+}
+
+.game-button_next:hover {
+    background-color: #45a049; /* Darker shade of green on hover for feedback */
+}
+
+
+
+#buttonContainer {
+    position: fixed; /* Position relative to the viewport */
+    bottom: 20px; /* 20px from the bottom */
+    left: 20px; /* 20px from the left */
+    z-index: 1100; /* Higher than other elements to ensure it's on top */
+}
+
+.score-counter {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    z-index: 1051;
+}
+
+
+#finalScoreModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    color: white; /* White text color */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+}
+#finalScoreModalContent {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#finalScoreModalContent {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-designer, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header style="position: sticky; top: 0; z-index: 1000;">
+        <!-- <h2>Welcome to My Website</h2> -->
+        <nav>
+            <ul>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="project">
+        <h2>Projects</h2>
+
+        <div id="project-list">
+            <div class="project-item">
+                <h3>Data Engineering</h3>
+                <p>This project involved building an architecture with Kafka streams, a data lake, and using Spark for scalability.</p>
+                <ul>
+                    <li><img src="images/dataeng/kafka_logo.png" alt="Kafka Streams Logo" class="logo-image"> Kafka Streams</li>
+                    <li><img src="images/dataeng/spark_logo.png" alt="Apache Spark Logo" class="logo-image"> Apache Spark</li>
+                    <li><img src="images/dataeng/minio_logo.png" alt="Minio Logo" class="logo-image"> Minio Data Lake</li>
+                    <li><img src="images/dataeng/scala_logo.png" alt="Scala Logo" class="logo-image"> Scala</li>
+                </ul>
+                <button class="view-btn">See More</button>
+                <div class="project-description" style="display: none;">
+                    <h3>I - Description</h3>
+                    <p>
+                        <strong>Situation:</strong> 
+                        Come up with a startup idea of an innovative service based on:
+                        <ul class="bullet-list">
+                            <li>IOT devices</li>
+                            <li>An information system</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <strong>IOT Devices:</strong> 
+                        These devices must emit data every few minutes (or seconds). Assuming the startup is successful, 
+                        there will be millions of these devices. We consider that you’ve managed to make a working prototype. 
+                        Every data emitted by the devices must contain:
+                        <ul>
+                            <li>Timestamps</li>
+                            <li>Device ID</li>
+                            <li>Latitude and Longitude</li>
+                            <li>Any other field you find useful (e.g., temperature, humidity, etc.)</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <strong>Your Information System Must Provide:</strong>
+                        <ul>
+                            <li>An urgent service referred to as "alert"</li>
+                            <li>A long-term analytics service</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <strong>Recommended System Architecture:</strong> 
+                        Based on the preliminary questions, your solution is very likely to include:
+                        <ul>
+                            <li>At least one distributed storage</li>
+                            <li>At least one distributed stream processing framework</li>
+                            <li>At least two stream consumers</li>
+                        </ul>
+                    </p>
+                    <h3>II - Our solution</h3>
+                    <p>
+                        Our idea was to assess the danger posed by individuals and alert the police when necessary. We use a "dangerousity" index, a float ranging from 0 to 1. For testing the architecture, we simply generated a random number within this range.
+                    </p>
+                    <p>
+                        We implemented a <strongDescr>Kafka stream</strongDescr> with two <strongDescr>brokers</strongDescr>, each configured with 3 <strongDescr>partitions</strongDescr> and <strongDescr>replicates</strongDescr> across all <strongDescr>topics</strongDescr>. This setup ensured that even if a broker failed, the project would continue functioning without any data loss, demonstrating our project's scalability.
+                    </p>
+                    <p>
+                        There were three sources of data, each representing drones, transmitting data every 0.1 seconds. All data were sent to a Kafka stream under the topic "drone-data."
+                    </p>
+                    <p>
+                        A <strongDescr>consumer</strongDescr> named "Consumer Datalake" stores the data on the <strongDescr>Minio</strongDescr> datalake. Another consumer, "Consumer Alert," monitors the "dangerousity" index. If it exceeds 0.9, it forwards the data to the topic "high-danger-alerts."
+                    </p>
+                    <p>
+                        Additionally, "Consumer AlertProcess" is tasked with triggering alerts via the Discord API to a Discord server when high danger alerts are received.
+                    </p>
+                    <p>
+                        <strong>Below is the architectural diagram that summarizes our setup:</strong>
+                    </p>
+                    <p>
+                        <img src="images/dataeng/architectureDataEng.png" alt="Architecture Diagram" class="full-width-image">
+                    </p>
+                </div>
+            </div>
+            <div class="project-item">
+                <h3>CNN Competitons</h3>
+                <p>2 competitions one with hand made CNN with tensorflow keras and another one with fine tuned with pytorch. These 2 competitions where done on boat images 128x192 pixels.</p>
+                <ul>
+                    <li><img src="images/CNN/tensorflow_logo.webp" alt="Tensorflow Logo" class="logo-image"> Tensorflow</li>
+                    <li><img src="images/CNN/pytorch_logo.webp" alt="Pytorch Logo" class="logo-image"> Pytorch</li>
+                </ul>
+                <button class="view-btn">See More</button>
+                <div class="project-description" style="display: none;">
+                    <p>Hand made involved a lot of testing </p>
+                </div>            
+
+
+            </div>
+
+
+            <div class="project-item">Project C - A brief description.</div>
+            <div class="project-item">Project A - A brief description.</div>
+            <div class="project-item">Project B - A brief description.</div>
+            <div class="project-item">Project C - A brief description.</div>
+            <div class="project-item">Project A - A brief description.</div>
+            <div class="project-item">NLP Project - This project was a .</div>
+            <div class="project-item">Hackathon Albertschool - The hackathon took place in the Albertschool, it was in collaboration with the french army. The subject I had to do was about NLP doing an AI that can detect if the message is from a human or an AI.</div>
+            <div class="project-item">Sudoku CNN - Develop a CNN that is able to solve Sudoku.</div>
+            <div class="project-item">Tiger - Reproduction of a tiger compilator from scratch in C++.</div>
+            <div class="project-item">42SH - Reproduction of a shell from scratch in C / Lexing, Parsing, Executer.</div>
+
+            <!-- More projects can be added here -->
+                
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = 1;
+                            entry.target.style.transform = "translateY(0)"; // Ensure items transition to their final position smoothly
+                        }
+                    });
+                }, {
+                    rootMargin: '0px',
+                    threshold: 0.1 // Adjust as needed
+                });
+            
+                document.querySelectorAll('.project-item').forEach(item => {
+                    observer.observe(item);
+                });
+            });
+        </script>
+    </section>
+    <section id="about">
+        <h2>About me</h2>
+        <p>This section is about you or your organization. Share your story here.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Have questions? Want to get in touch? Here's how you can reach me:</p>
+        <address>
+            <strong>Email:</strong> <a href="mailto:floriansegard@gmail.com">floriansegard@gmail.com</a><br>
+            <strong>Phone:</strong> (123) 456-7890
+        </address>
+    </section>
+    <footer>
+        <p onclick="startGame()">Copyright © 2024 Florian Segard-Gahery</p>
+    </footer>
+    <div id="gameContainer" style="display:none;">
+        <button id="closeButton" onclick="closeGame()">&times;</button>
+        <div id="map-container" class="view-container">
+            <div id="street-view" class="half-view"></div>
+            <div id="map" class="half-view"></div>
+        </div>
+        <div id="resultModal" style="display:none;">
+            <div id="resultModalContent">
+                <span onclick="closeModal()">&times;</span>
+                <p id="distanceResult">Distance from original location: 0 km</p>
+                <div class="progress-bar-wrapper">
+                    <div id="scoreBar" class="progress-bar"></div>
+                </div>
+                <p id="scoreResult">Score: 0</p>
+
+            </div>
+            <button class="game-button_next" onclick="nextMap()">Next Map</button>
+
+        </div>
+        
+        <div id="buttonContainer">
+            <button id="validateGuess" class="game-button" onclick="validateGuess()">Validate Guess</button>
+            <button class="game-button" onclick="resetView()">Reset View</button>
+        </div>
+        <div class="score-counter">
+            <span id="gameCount">Game: 1/5</span> | <span id="totalScore">Total Score: 0</span>
+        </div>
+    
+    </div>
+    <div id="finalScoreModal">
+        <div id="finalScoreModalContent">
+            <span onclick="closeFinalScoreModal()">&times;</span>
+            <h2>Final Score</h2>
+            <div class="progress-bar-wrapper">
+                <div id="finalScoreBar" class="progress-bar"></div>
+            </div>
+            <p id="finalScoreResult">Score: 0</p>
+        </div>
+    </div>
+
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCMm6CS82t6Hv_ymU2Es6uo63HlJ6J0qg&v=weekly" async defer></script>
+    <script src="app.js"></script>
+    <script src="viewmore.js"></script>
+    
+</body>
+</html>
