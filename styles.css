@@ -13,14 +13,50 @@ body {
 
 /* Header styling */
 header {
+    box-sizing: border-box; /* Include padding and borders in the width calculation */
     background-color: #fff;
     color: #333;
     padding: 20px 20px;
     text-align: center;
-    border-bottom: 2px solid #ccc; /* Changed to only bottom border */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Added shadow for depth */
+    border-bottom: 2px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border-radius: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: right 0.3s ease-in-out, width 0.3s ease-in-out, padding 0.3s ease-in-out;
+    left: 0; /* Ensure full width initially */
+    right: 0; /* Aligns right edge to container */
+    width: 100%; /* Start with full width */
+    font-size: 16px;
 }
+
+.small-header {
+    padding: 5px 10px;
+    background-color: #fff; /* Lighter color for smaller header */
+    width: 50%; /* Narrower width for the small header */
+    right: 0; /* Stick to the top-right */
+    left: 70em; /* Remove the left positioning to allow right alignment */
+}
+
+@media (max-width: 950px) {  /* Adjust this breakpoint to match your design requirements */
+    header {
+        padding: 5px 10px; /* Smaller padding for mobile */
+        font-size: 10px; /* Smaller font size for mobile devices */
+        
+    }
+
+    .small-header {
+        font-size: 1em;
+        padding: 3px 7px; /* Even smaller padding for the small header on mobile */
+        width: 100%; /* Full width or adjust as needed */
+        left: 20em; /* Reset to full-width alignment */
+        right: 0; /* Keep right alignment to keep it neat */
+        background-color: #fff; /* Optionally change the background color for better visibility on mobile */
+    }
+}
+
+
 
 /* Navigation menu styles */
 nav ul {
@@ -88,7 +124,7 @@ section {
     left: 0; /* Aligns to the left of the project list */
     height: auto; /* Auto height to fit content */
     z-index: 100; /* Ensures it's above other content */
-    padding: 40px;
+    padding: 3em;
     box-sizing: border-box;
     overflow-y: auto; /* Adds scroll to the expanded project */
     border-radius: 0;
@@ -144,7 +180,7 @@ section {
 
 .view-btn {
     padding: 8px 16px;
-    background-color: #007BFF; /* Bootstrap primary blue */
+    background-color: #a61818; /* Bootstrap primary blue */
     color: white;
     border: none;
     border-radius: 5px;
@@ -153,7 +189,7 @@ section {
 }
 
 .view-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #701111; /* Darker blue on hover */
 }
 
 .project-description {
@@ -195,7 +231,7 @@ section {
 }
 
 strongDescr {
-    color: #0056b3; /* Change the font color for emphasis */
+    color: #c91d1d; /* Change the font color for emphasis */
     font-weight: bold; /* Ensure it's bold */
     background-color: #f0f0f0; /* Optional: add a light background */
     padding: 2px 4px; /* Optional: padding to make it stand out */
@@ -207,6 +243,45 @@ strongDescr {
     color: #333;
     font-size: 1.1em;
 }
+
+
+
+
+
+
+.f1-table {
+    width: 50%;
+    border-collapse: collapse;
+}
+.f1-table th, .f1-table td {
+    padding: 8px 12px;
+    text-align: left;
+}
+.f1-table th {
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

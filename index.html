@@ -8,22 +8,24 @@
 </head>
 <body>
     <header style="position: sticky; top: 0; z-index: 1000;">
-        <!-- <h2>Welcome to My Website</h2> -->
         <nav>
             <ul>
-                <li><a href="#project">Project</a></li>
+                <li><a href="#project">Projects</a></li>
                 <li><a href="#about">About me</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <section id="project">
-        <h2>Projects</h2>
+        <h1>Projects</h1>
 
         <div id="project-list">
             <div class="project-item">
                 <h3>Data Engineering</h3>
-                <p>This project involved building an architecture with Kafka streams, a data lake, and using Spark for scalability.</p>
+                <p>
+                    This project involved building a robust and resilient architecture using <strongDescr>Kafka streams</strongDescr>, a <strongDescr>data lake</strongDescr>, and <strongDescr>Spark</strongDescr> to ensure scalability.<br>
+                    We utilized <strongDescr>Scala</strongDescr> as our programming language, emphasizing functional programming to ensure the purity of functions and achieve optimal <strongDescr>scalability</strongDescr> with Spark.<br>
+                    The architecture was designed to handle the transmission of large volumes of small datas effectively.</p>
                 <ul>
                     <li><img src="images/dataeng/kafka_logo.png" alt="Kafka Streams Logo" class="logo-image"> Kafka Streams</li>
                     <li><img src="images/dataeng/spark_logo.png" alt="Apache Spark Logo" class="logo-image"> Apache Spark</li>
@@ -44,7 +46,7 @@
                     <p>
                         <strong>IOT Devices:</strong> 
                         These devices must emit data every few minutes (or seconds). Assuming the startup is successful, 
-                        there will be millions of these devices. We consider that you’ve managed to make a working prototype. 
+                        there will be millions of these devices. We consider that you've managed to make a working prototype. 
                         Every data emitted by the devices must contain:
                         <ul>
                             <li>Timestamps</li>
@@ -95,27 +97,176 @@
             </div>
             <div class="project-item">
                 <h3>CNN Competitons</h3>
-                <p>2 competitions one with hand made CNN with tensorflow keras and another one with fine tuned with pytorch. These 2 competitions where done on boat images 128x192 pixels.</p>
+                <p>
+                    We participated in two competitions: one involved creating a custom <strongDescr>Convolutional Neural Network</strongDescr> (CNN) using <strongDescr>TensorFlow</strongDescr> and <strongDescr>Keras</strongDescr>, and the other involved fine-tuning a model with PyTorch.<br>
+                    Both competitions focused on classifying boat images sized 128x192 pixels into 10 different categories.
+                </p>
                 <ul>
                     <li><img src="images/CNN/tensorflow_logo.webp" alt="Tensorflow Logo" class="logo-image"> Tensorflow</li>
                     <li><img src="images/CNN/pytorch_logo.webp" alt="Pytorch Logo" class="logo-image"> Pytorch</li>
                 </ul>
                 <button class="view-btn">See More</button>
                 <div class="project-description" style="display: none;">
-                    <p>Hand made involved a lot of testing </p>
-                </div>            
+                    <h3>I - Description</h3>
+                    <p>
+                        <strong>Competition 1</strong>
+                    </p>
+                    <p>
+                        Create a New Notebook from the Code tab to have the data loaded.
+                        <ul>
+                            <li>Write a CNN by hand with fewer than 30 layers (include print("Number of layers: ", len(model.layers)) in your sheet; I will grep it).</li>
+                            <li>Submit your results.</li>
+                            <li>Check your ranking (and possibly start over).</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <strong>Competition 2</strong>
+                    </p>
+                    <p>
+                        <ul>
+                            <li>This involves starting with an existing network and adapting it for this project. You are allowed to do anything, but it must be able to run on Kaggle.</li>
+                            <li>Submit your results.</li>
+                            <li>Check your ranking (and possibly start over).</li>
+                        </ul>
+                    </p>
 
+                    <h3>II - Hand made competiton</h3>
+                    <p>
+                        I tried copying different existing architecture like AlexNet or VGGNet, I also tried to build my own but it was not very concluent all this was done with keras <strongDescr>Tensorflow</strongDescr>.
+                    </p>
+                    <p>
+                        In the end I took the VGGNet and did some testing around it which alowed me to have a testing accuracy of <strongDescr>0.91141</strongDescr> on images we didn't had access to.
+                        Alowing me to be in the <strongDescr>4th place</strongDescr> of the competition.
+                    </p>
+                    <h3>III - Fine Tuning competition</h3>
+                    <p>
+                        We tried fine tuning different models and the one that worked the best for this exercise was a version of pre trained densenet121 from <strongDescr>Pyrtorch</strongDescr>.
+                    </p>
+                    <p>
+                        And with testing we went up to <strongDescr>0.94891</strongDescr> on the images we didn't had access to.
+                        Alowing me to be in the <strongDescr>1st place</strongDescr> of the competition.
 
+                    </p>
+                </div>
             </div>
 
 
-            <div class="project-item">Project C - A brief description.</div>
+            <div class="project-item">
+                <h3>Big Data</h3>
+                <p>
+                    This project focused on processing a substantial amount of financial data in the most efficient manner possible, aiming for maximum speed without any loss of data.<br>
+                    We developed a backend using <strongDescr>Pandas</strongDescr> to transfer data to the <strongDescr>PostgreSQL</strongDescr> database as effectively as possible.<br>
+                    We then developped a <strongDescr>Dash</strongDescr> frontend to visualize the stored data.
+                </p>
+                <ul>
+                    <!-- <li><img src="images/BigData/numpy_logo.png" alt="Numpy Logo" class="logo-image"> Numpy</li> -->
+                    <li><img src="images/BigData/pandas_logo.png" alt="Pandas Logo" class="logo-image"> Pandas</li>
+                    <li><img src="images/BigData/docker_logo.webp" alt="Docker Logo" class="logo-image"> Docker</li>
+                    <li><img src="images/BigData/sql_logo.png" alt="SQL Logo" class="logo-image"> PostgreSQL</li>
+                </ul>
+                <button class="view-btn">See More</button>
+                <div class="project-description" style="display: none;">
+                    <h3>I - Description</h3>
+                    <p>
+                        <strong> 5 years of financial data</strong>
+                    </p>
+                    <p>
+                        The work is done in two steps:
+                        <ul>
+                            <li>Read the data, clean it, and store it intelligently in a database.</li>
+                            <li>Create a dashboard that allows for visualization of the data and performing some analyses.</li>
+                        </ul>
+                    </p>
+
+                    <h3>II - Backend</h3>
+                    <p>
+                        The backend was the most substantial component of this project. It involved collecting, processing, and optimizing the data with <strongDescr>Pandas</strongDescr>, plus transferring it to the <strongDescr>PostgreSQL</strongDescr> database, which was challenging.
+                    </p>
+                    <p>
+                        After optimizing the code, the total processing time for all the data was approximately <strongDescr>one hour</strongDescr> to read the datas from <strongDescr>271325 files</strongDescr>, clean them and stock the datas, even on less efficient computers.
+                    </p>
+                    <p>
+                        One potential improvement to reduce processing time could be to implement multithreading. However, I encountered database issues and lacked sufficient time to address these.
+                        Additionally, the project's high resource consumption with multithreading limited its compatibility across different computers.
+                    </p>
+                    <h3>III - Frontend</h3>
+                    <p>
+                        In our project, we've created a financial analytics dashboard using Dash in Python. The features we did were:
+                    </p>
+                    <p>
+                        <ul>
+                            <li>Display options for stock prices on a logarithmic scale, either as line charts or candlesticks.</li>
+                            <li>Customizable date range selections for viewing stock data.</li>
+                            <li>Multiple stock displays with individual color coding and an interactive legend for toggling visibility.</li>
+                            <li>Bollinger Bands for analyzing stock volatility.</li>
+                            <li>A data table showing daily stats like min, max, and average prices for selected stocks.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="project-item">
+                <h3>Hackathon Albertschool AI vs AI</h3>
+                <p>
+                    The hackathon was held at the <strongDescr>Albertschool</strongDescr>, in collaboration with the <strongDescr>French Army</strongDescr>. <br>
+                    Our task involved developing a <strongDescr>Natural Language Processing</strongDescr> (NLP) AI that could distinguish whether a message was written by a human or an AI. <br>
+                    To process the data, we utilized <strongDescr>Pandas</strongDescr>, and for training our models, we employed <strongDescr>Scikit Learn</strongDescr>.
+                </p>
+                <ul>
+                    <li><img src="images/hackathon/pandas_logo.png" alt="Pandas Logo" class="logo-image"> Pandas</li>
+                    <li><img src="images/hackathon/sklearn_logo.svg" alt="Sklearn Logo" class="logo-image"> Scikit Learn</li>
+                </ul>
+
+                <button class="view-btn">See More</button>
+                <div class="project-description" style="display: none;">
+                    <h3>I - Description</h3>
+                    <p>
+                        <strong>"AI vs AI"</strong>: concerns the detection of texts emitted by a generative AI. This challenge takes place at <strongDescr>Albertschool</strongDescr> in Paris during three days.
+                    </p>
+
+                    <h3>II - Data cleaning and Pretreatment</h3>
+                    <p>
+                        During the data cleaning phase, we performed basic operations such as removing datas that were either NULL or not usable.
+                    </p>
+                    <p>
+                        Subsequently, we applied various tokenization methods and assessed their performance across different models, utilizing libraries such as <strongDescr>NLTK</strongDescr>.
+                    </p>
+                    <p>
+                        We also reviewed all sources of the texts and identified that the dataset was constructed using more than 30 different AIs.<br>
+                        With this knowledge, we adjusted the number of texts sourced from each AI based on their initial accuracy in our existing model.
+                    </p>
+                    <h3>III - Models</h3>
+                    <p>
+                        We experimented with a variety of models for this project, compared their performances, and selected the best one. Here is the list of the different models we tested:
+                    </p>
+                    <p>
+                        <table class="f1-table">
+                            <tr>
+                                <td><strongDescr>TF-IDF</strongDescr> with <strongDescr>GridSearch</strongDescr></td>
+                                <td>F1-score: <strongDescr>0.9516</strongDescr></td>
+                            </tr>
+                            <tr>
+                                <td><strongDescr>N-BAGS</strongDescr> with <strongDescr>GridSearch</strongDescr></td>
+                                <td>F1-score: <strongDescr>0.9507</strongDescr></td>
+                            </tr>
+                            <tr>
+                                <td><strongDescr>BiDirectionnal RNN</strongDescr></td>
+                                <td>F1-score: <strongDescr>0.9437</strongDescr></td>
+                            </tr>
+                            <tr>
+                                <td><strongDescr>Bert</strongDescr></td>
+                                <td>F1-score: <strongDescr>0.8137</strongDescr></td>
+                            </tr>
+                        </table>
+                
+                    </p>
+                </div>
+
+            </div>
             <div class="project-item">Project A - A brief description.</div>
             <div class="project-item">Project B - A brief description.</div>
             <div class="project-item">Project C - A brief description.</div>
             <div class="project-item">Project A - A brief description.</div>
             <div class="project-item">NLP Project - This project was a .</div>
-            <div class="project-item">Hackathon Albertschool - The hackathon took place in the Albertschool, it was in collaboration with the french army. The subject I had to do was about NLP doing an AI that can detect if the message is from a human or an AI.</div>
             <div class="project-item">Sudoku CNN - Develop a CNN that is able to solve Sudoku.</div>
             <div class="project-item">Tiger - Reproduction of a tiger compilator from scratch in C++.</div>
             <div class="project-item">42SH - Reproduction of a shell from scratch in C / Lexing, Parsing, Executer.</div>
@@ -145,15 +296,41 @@
     </section>
     <section id="about">
         <h2>About me</h2>
-        <p>This section is about you or your organization. Share your story here.</p>
+        <p>
+            Hi there! I'm Florian, a student at <strongDescr>EPITA</strongDescr>, an esteemed <strongDescr>Informatics</strongDescr> and <strongDescr>Engineering</strongDescr> school where I specialize in programming, 
+            <strongDescr>Artificial Intelligence</strongDescr> and <strongDescr>Datas</strongDescr>.<br>
+            With a deep-rooted passion for technology, I have knowledge a variety of programming languages including <strongDescr>Python</strongDescr>, <strongDescr>Scala</strongDescr>, <strongDescr>C</strongDescr>, <strongDescr>C++</strongDescr>, <strongDescr>C#</strongDescr> and more.
+        </p>    
+        <p>
+            Currently, I am immersed in AI studies, adept at utilizing tools such as <strongDescr>Scikit-learn</strongDescr>, <strongDescr>PyTorch</strongDescr>, <strongDescr>TensorFlow</strongDescr>, <strongDescr>NumPy</strongDescr>, 
+            <strongDescr>Pandas</strongDescr>, and more to solve complex problems and innovate solutions.<br>
+            My academic journey also includes a <strongDescr>Bachelor's degree</strongDescr> in <strongDescr>Mathematics</strongDescr>, a field I thoroughly enjoy and excel in.
+        </p>
+        <p>
+            My professional experience includes serving as a <strongDescr>Mathematics Tutor</strongDescr> at <strongDescr>La Sorbonne (UPMC)</strongDescr> and working as a <strongDescr>Software Developer</strongDescr> at <strongDescr>A26 BLM</strongDescr>, an architecture company.<br>
+            These roles have not only honed my technical skills but also enriched my ability to teach and collaborate effectively.
+        </p>
+        <p>
+            I am always on the lookout for intriguing job opportunities where I can continue to learn and grow. I believe that the ever-evolving field of technology offers endless possibilities for innovation and discovery.
+        </p>
+        <p>
+            Outside of my professional interests, I am an avid sports enthusiast. I enjoy <strongDescr>Climbing</strongDescr>, dedicating 2 to 3 sessions a week to it, and playing <strongDescr>Basketball</strongDescr>. <br>
+            These activities help me stay active and balanced, providing a perfect counterpoint to my academic and professional pursuits.
+        </p>
+        <p>
+            Thank you for visiting my website. I look forward to connecting with you! So do not hesitate to contact me with the links in the contact section.
+        </p>
+
+
     </section>
     <section id="contact">
         <h2>Contact</h2>
         <p>Have questions? Want to get in touch? Here's how you can reach me:</p>
         <address>
             <strong>Email:</strong> <a href="mailto:floriansegard@gmail.com">floriansegard@gmail.com</a><br>
-            <strong>Phone:</strong> (123) 456-7890
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/florian-segard-gahery-0999221a8/" target="_blank">LinkedIn Profile</a><br>
         </address>
+
     </section>
     <footer>
         <p onclick="startGame()">Copyright © 2024 Florian Segard-Gahery</p>
@@ -202,6 +379,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCMm6CS82t6Hv_ymU2Es6uo63HlJ6J0qg&v=weekly" async defer></script>
     <script src="app.js"></script>
     <script src="viewmore.js"></script>
-    
+    <script src="headersmaller.js"></script>
 </body>
 </html>
