@@ -18,7 +18,6 @@
     </header>
     <section id="project">
         <h1>Projects</h1>
-
         <div id="project-list">
             <div class="project-item">
                 <h3>Data Engineering</h3>
@@ -95,6 +94,7 @@
                     </p>
                 </div>
             </div>
+
             <div class="project-item">
                 <h3>CNN Competitons</h3>
                 <p>
@@ -112,7 +112,6 @@
                         <strong>Competition 1</strong>
                     </p>
                     <p>
-                        Create a New Notebook from the Code tab to have the data loaded.
                         <ul>
                             <li>Write a CNN by hand with fewer than 30 layers (include print("Number of layers: ", len(model.layers)) in your sheet; I will grep it).</li>
                             <li>Submit your results.</li>
@@ -149,7 +148,6 @@
                     </p>
                 </div>
             </div>
-
 
             <div class="project-item">
                 <h3>Big Data</h3>
@@ -204,18 +202,18 @@
                     </p>
                 </div>
             </div>
+
             <div class="project-item">
                 <h3>Hackathon Albertschool AI vs AI</h3>
                 <p>
                     The hackathon was held at the <strongDescr>Albertschool</strongDescr>, in collaboration with the <strongDescr>French Army</strongDescr>. <br>
                     Our task involved developing a <strongDescr>Natural Language Processing</strongDescr> (NLP) AI that could distinguish whether a message was written by a human or an AI. <br>
-                    To process the data, we utilized <strongDescr>Pandas</strongDescr>, and for training our models, we employed <strongDescr>Scikit Learn</strongDescr>.
+                    To process the data, we utilized <strongDescr>Pandas</strongDescr>, and for training our models, we employed <strongDescr>Scikit-Learn</strongDescr>.
                 </p>
                 <ul>
                     <li><img src="images/hackathon/pandas_logo.png" alt="Pandas Logo" class="logo-image"> Pandas</li>
-                    <li><img src="images/hackathon/sklearn_logo.svg" alt="Sklearn Logo" class="logo-image"> Scikit Learn</li>
+                    <li><img src="images/hackathon/sklearn_logo.svg" alt="Sklearn Logo" class="logo-image"> Scikit-Learn</li>
                 </ul>
-
                 <button class="view-btn">See More</button>
                 <div class="project-description" style="display: none;">
                     <h3>I - Description</h3>
@@ -260,17 +258,150 @@
                 
                     </p>
                 </div>
+            </div>
+
+            <div class="project-item">
+                <h3>NLP Project</h3>
+                <p>
+                    This <strongDescr>Epita</strongDescr> project served as a summary of all the key topics covered throughout the course.<br>
+                    We were tasked with selecting or sourcing our own datasets our dataset was about <strongDescr>Music Genres</strongDescr>, and utilizing them to train various <strongDescr>NLP</strongDescr> <strongDescr>AI</strongDescr> and <strongDescr>Statistical</strongDescr> models.<br>
+                    We used mainly used <strongDescr>Pandas</strongDescr> to clean the datas and <strongDescr>Scikit-Learn</strongDescr> to train our different models.
+                </p>
+                <ul>
+                    <li><img src="images/nlpProject/pandas_logo.png" alt="Pandas Logo" class="logo-image"> Pandas</li>
+                    <li><img src="images/nlpProject/sklearn_logo.svg" alt="Sklearn Logo" class="logo-image"> Scikit-Learn</li>
+                </ul>
+                <button class="view-btn">See More</button>
+                <div class="project-description" style="display: none;">
+                    <h3>I - Description</h3>
+
+                    <p><strong>1- Data Processing:</strong></p>
+                    <p>
+                        <ul>
+                            <li>Presentation: Describe the chosen dataset.</li>
+                            <li>Pre-processing: Apply tokenization (regex and BPE), normalization (removal of stop words, lemmatization, converting to lowercase).</li>
+                            <li>Statistics: Provide basic statistics (number of documents, tokens, frequency of tokens, etc.).</li>
+                        </ul>
+                    </p>
+                    <p><strong>2- Models:</strong></p>
+                    <p>
+                        <ul>
+                            <li>Training: Train various models (n-gram, naive Bayes, logistic regression, tf-idf, word2vec, neural networks).</li>
+                            <li>Evaluation: Assess performance using standard metrics (perplexity, recall, precision, f1-score).</li>
+                            <li>Optimization: Vary pre-processing and hyperparameters to improve performance.</li>
+                            <li>Analysis: Discuss limitations and propose improvements.</li>
+                        </ul>
+                    </p>
+
+                    <h3>II - Data cleaning and Pretreatment</h3>
+                    <p>
+                        We analyzed the dataset and then cleaned the data to ensure all entries were in English, eliminating any multilingual issues for training our models.
+                    </p>
+                    <p>
+                        We implemented different <strongDescr>Tokenization</strongDescr> processes using <strongDescr>NLTK</strongDescr> and <strongDescr>Tiktoken</strongDescr>,
+                        which segment the text into smaller units. We also applied several <strongDescr>normalization</strongDescr> methods to simplify the text, such as converting to <strongDescr></strongDescr>lowercase, <strongDescr>removing punctuation</strongDescr>, <strongDescr>stopwords</strongDescr>, and <strongDescr>lemmatization</strongDescr>.
+                    </p>
+                    <h3>III - Models</h3>
+                    <p>
+                        The project explores several models for the classification of music genres. <br>
+                        <strongDescr>N-grams</strongDescr> use <strongDescr>trigrams</strongDescr> to generate new content, showing potential in capturing the lyrical styles of musical genres.<br> 
+                        <strongDescr>Naive Bayes</strongDescr> and <strongDescr>Logistic Regression</strongDescr> are tested with different <strongDescr>Preprocessing</strongDescr> to examine their effectiveness in classification. 
+                        Advanced approaches such as <strongDescr>TF-IDF</strongDescr> and <strongDescr>Word2Vec</strongDescr> are also implemented to enhance the capture of semantic relationships in the texts.<br>
+                        <strongDescr>Neural Networks</strongDescr>, both <strongDescr>feedforward</strongDescr> and <strongDescr>recurrent</strongDescr>, are experimented with to assess their ability to handle the sequential data of lyrics. <br>
+                        Each model is evaluated by its <strongDescr>Accuracy</strongDescr>, <strongDescr>Recall</strongDescr>, and <strongDescr>F1-score</strongDescr> to determine which method provides the best results for genre classification.
+
+                    </p>
+                </div>
 
             </div>
-            <div class="project-item">Project A - A brief description.</div>
+                <div class="project-item">
+                    <h3>Microsoft Azure Project</h3>
+                    <p>
+                        This project leveraged Microsoft Azure's cloud solutions, including <strongDescr>Computer Vision</strongDescr> and <strongDescr>Machine Learning</strongDescr>, to predict outcomes on two distinct datasets selected from Kaggle.<br>
+                        We utilized a <strongDescr>breast cancer</strongDescr> dataset, employing images for the computer vision component and tabular data for the machine learning aspect.<br>
+                        Here are the links to the two <strongDescr>Datasets</strongDescr> we used:<br>
+                        <a href="https://www.kaggle.com/datasets/truthisneverlinear/bach-breast-cancer-histology-images" target="_blank">Images dataset</a> and 
+                        <a href="https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset" target="_blank">Table dataset</a>
+                    </p>
+                    <ul>
+                        <li><img src="images/microsoftAzure/microsoftAzure_logo.png" alt="MicrosoftAzure Logo" class="logo-image"> Microsoft Azure</li>
+                    </ul>
+                    <button class="view-btn">See More</button>
+                    <div class="project-description" style="display: none;">
+
+                    <h3>I - Description</h3>
+                    <p>
+                        Utilize datasets of your choice to implement Computer Vision and Machine Learning using Microsoft Azure. <br>
+                        To build a website for the cloud-based Machine Learning component, you must have access to an API provided by Microsoft Azure. <br>
+                        For the Computer Vision component, you need to construct a Docker container to access its API.
+                    </p>
+                    <h3>II - Our solution</h3>
+                    <p>
+                        We used <strongDescr>Microsoft Azure</strongDescr> tools to train a <strongDescr>Computer Vision</strongDescr> model, which we then deployed locally using Docker <strongDescr>Docker</strongDescr>.<br>
+                        Then, we employed <strongDescr>Machine Learning</strongDescr> capabilities to analyze tabular data.<br>
+                        These combined technologies enabled us to identify various stages of cancer effectively with different data types.<br>
+                        To integrate these components, we developed a streamlined <strongDescr>Flask</strongDescr> application.
+                    </p>
+                    <p>
+                        <strong>Below is the architectural diagram that summarizes our setup:</strong>
+                    </p>
+                    <p>
+                        <img src="images/microsoftAzure/architectureMicrosoftAzure.png" alt="Architecture MicrosoftAzure Diagram" class="full-width-image">
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3>Portfolio</h3>
+                <p>
+                    This <strongDescr>Website</strongDescr> was made to show the differents projects I made.<br>
+                    It is hosted with <strongDescr>AWS</strongDescr>.<br>
+                    This project is made completly in <strongDescr>HTML</strongDescr>, <strongDescr>CSS</strongDescr> and <strongDescr>JavaScript</strongDescr>.
+                </p>
+                <ul>
+                    <li><img src="images/portfolio/html_logo.png" alt="HTML Logo" class="logo-image"> HTML</li>
+                    <li><img src="images/portfolio/css_logo.svg" alt="CSS Logo" class="logo-image"> CSS</li>
+                    <li><img src="images/portfolio/javascript_logo.png" alt="JavaScript Logo" class="logo-image"> JavaScript</li>
+                </ul>
+                <button class="view-btn">See More</button>
+                <div class="project-description" style="display: none;">   
+                   <p>
+                        This <strongDescr>Website</strongDescr> is meticulously designed to showcase the complete <strongDescr>Portfolio</strongDescr> of projects I have created.<br>
+                        I aimed to achieve a <strongDescr>Clean</strongDescr> and <strongDescr>Refined</strongDescr> aesthetic throughout the design, ensuring that each project is highlighted in a visually appealing and organized manner.
+                    </p> 
+                    <p>
+                        There is also a small <strongDescr>GeoGuessr</strongDescr> like game hidden in the <strongDescr>Website</strongDescr>.<br>
+                        I used the <strongDescr>Google API</strongDescr> and <strongDescr>JavaScript</strongDescr> to do it, but there are only two mounth of free API usage so it wont be able for a long time.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <h3>Tiger</h3>
+                <p>
+                    Tiger compilator from scratch in C++.
+                </p>
+                <ul>
+                    <li><img src="images/tiger/c++_logo.png" alt="C++ Logo" class="logo-image"> C++</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <h3>42SH</h3>
+                <p>
+                    Reproduction of a shell from scratch in C / Lexing, Parsing, Executer.
+                </p>
+                <ul>
+                    <li><img src="images/42sh/c_logo.png" alt="C Logo" class="logo-image"> C</li>
+                </ul>
+            </div>
+
+            <!-- <div class="project-item">Project A - A brief description.</div>
             <div class="project-item">Project B - A brief description.</div>
             <div class="project-item">Project C - A brief description.</div>
             <div class="project-item">Project A - A brief description.</div>
             <div class="project-item">NLP Project - This project was a .</div>
-            <div class="project-item">Sudoku CNN - Develop a CNN that is able to solve Sudoku.</div>
-            <div class="project-item">Tiger - Reproduction of a tiger compilator from scratch in C++.</div>
-            <div class="project-item">42SH - Reproduction of a shell from scratch in C / Lexing, Parsing, Executer.</div>
-
+            <div class="project-item">Sudoku CNN - Develop a CNN that is able to solve Sudoku.</div> -->
             <!-- More projects can be added here -->
                 
         </div>
@@ -327,7 +458,7 @@
         <h2>Contact</h2>
         <p>Have questions? Want to get in touch? Here's how you can reach me:</p>
         <address>
-            <strong>Email:</strong> <a href="mailto:floriansegard@gmail.com">floriansegard@gmail.com</a><br>
+            <strong>Email:</strong> <a href="mailto:florian.segard-gahery@epita.fr">florian.segard-gahery@epita.fr</a><br>
             <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/florian-segard-gahery-0999221a8/" target="_blank">LinkedIn Profile</a><br>
         </address>
 

@@ -33,10 +33,17 @@ document.addEventListener("DOMContentLoaded", function() {
                     this.textContent = 'See More'; // Change button text back to 'See More'
 
                     // Scroll back to the initial position
-                    window.scrollTo({
-                        top: initialScrollPosition,
-                        behavior: 'smooth'
-                    });
+                    if (initialScrollPosition < 50) {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        window.scrollTo({
+                            top: initialScrollPosition,
+                            behavior: 'smooth'
+                        });
+                    }
                 }, 300); // Match the CSS transition time
             }
         });
