@@ -16,7 +16,7 @@ header {
     box-sizing: border-box; /* Include padding and borders in the width calculation */
     background-color: #fff;
     color: #333;
-    padding: 20px 20px;
+    padding: 20px;
     text-align: center;
     border-bottom: 2px solid #ccc;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -31,30 +31,7 @@ header {
     font-size: 16px;
 }
 
-.small-header {
-    padding: 5px 10px;
-    background-color: #fff; /* Lighter color for smaller header */
-    width: 50%; /* Narrower width for the small header */
-    right: 0; /* Stick to the top-right */
-    left: 70em; /* Remove the left positioning to allow right alignment */
-}
 
-@media (max-width: 950px) {  /* Adjust this breakpoint to match your design requirements */
-    header {
-        padding: 5px 10px; /* Smaller padding for mobile */
-        font-size: 10px; /* Smaller font size for mobile devices */
-        
-    }
-
-    .small-header {
-        font-size: 1em;
-        padding: 3px 7px; /* Even smaller padding for the small header on mobile */
-        width: 100%; /* Full width or adjust as needed */
-        left: 20em; /* Reset to full-width alignment */
-        right: 0; /* Keep right alignment to keep it neat */
-        background-color: #fff; /* Optionally change the background color for better visibility on mobile */
-    }
-}
 
 
 
@@ -84,6 +61,53 @@ nav a:hover {
     border-radius: 5px; /* Rounded corners on hover */
 }
 
+
+.small-header {
+    padding: 5px 10px;
+    background-color: #fff; /* Lighter color for smaller header */
+    width: 50%; /* Narrower width for the small header */
+    right: 0; /* Stick to the top-right */
+    left: 70em; /* Remove the left positioning to allow right alignment */
+}
+
+@media (max-width: 950px) {  /* Adjust this breakpoint to match your design requirements */
+    .small-header {
+        padding: 5px 10px;
+        background-color: #fff; /* Lighter color for smaller header */
+        width: 50%; /* Narrower width for the small header */
+        right: 0; /* Stick to the top-right */
+        left: 70em; /* Remove the left positioning to allow right alignment */
+    }
+
+}
+
+@media (max-width: 750px) {  /* Adjust this breakpoint to match your design requirements */
+    header {
+        padding: 5px 10px; /* Smaller padding for mobile */
+        font-size: 25px; /* Smaller font size for mobile devices */  
+    }
+
+    .small-header {
+        font-size: 5px;
+        padding: 3px 7px; /* Even smaller padding for the small header on mobile */
+        width: 100%; /* Full width or adjust as needed */
+        left: 20em; /* Reset to full-width alignment */
+        right: 0; /* Keep right alignment to keep it neat */
+        background-color: #fff; /* Optionally change the background color for better visibility on mobile */
+    }
+
+    nav ul li {
+        margin-right: 5px; /* Increased spacing */
+        font-size: 13px; /* Larger font size for better visibility */
+    }
+}
+
+
+
+
+
+
+
 /* Section styling */
 section {
     padding: 20px 40px 40px 40px; /* Decreased top padding and specified padding for other sides */
@@ -92,6 +116,8 @@ section {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soft shadow for 3D effect */
     border-radius: 10px; /* Smoother corners */
 }
+
+
 
 @media (max-width: 950px) {  /* Adjust this breakpoint to match your design requirements */
     section {
@@ -288,11 +314,6 @@ strongDescr {
     font-size: 1.1em;
 }
 
-
-
-
-
-
 .f1-table {
     width: 50%;
     border-collapse: collapse;
@@ -306,6 +327,19 @@ strongDescr {
 }
 
 
+button {
+    padding: 10px 20px;
+    background-color: #a61818; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #701111;
+}
 
 
 
